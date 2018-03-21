@@ -2,8 +2,8 @@ type UserRole = 'Employee' | 'Manager';
 type UserPermission = 'Allowed' | 'Blocked';
 
 interface IUser {
-    role: UserRole;
-    permission: UserPermission;
+    roles: UserRole[];
+    permissions: UserPermission[];
     // Other stuff
 }
 
@@ -14,42 +14,42 @@ interface IRoute {
 }
 
 function canUserAccess(user: IUser, route: IRoute) {
-    const permission = getUserPermission(user);
-    const role = getUserRole(user);
+    const permissions = getUserPermissions(user);
+    const roles = getUserRoles(user);
 
     return hasRouteAccess({
-        permission,
-        role,
+        permissions,
+        roles,
         route,
     });
 }
 
-function getUserPermission(user: IUser): UserPermission {
-    return user.permission;
+function getUserPermissions(user: IUser): UserPermission[] {
+    return user.permissions;
 }
 
-function getUserRole(user: IUser): UserRole {
-    return user.role;
+function getUserRoles(user: IUser): UserRole[] {
+    return user.roles;
 }
 
 function hasRouteAccess({
-    permission,
-    role,
+    permissions,
+    roles,
     route,
 }: {
-    permission: UserPermission,
-    role: UserRole,
+    permissions: UserPermission[],
+    roles: UserRole[],
     route: IRoute,
 }): boolean {
-    return hasPermissionForRoute(permission, route) && hasRoleForRoute(role, route);
+    return hasPermissionForRoute(permissions, route) && hasRoleForRoute(roles, route);
 }
 
-function hasPermissionForRoute(permission: UserPermission, route: IRoute): boolean {
-    return permission.includes(route.requiredPermission);
+function hasPermissionForRoute(permission: UserPermission[], route: IRoute): boolean {
+    return permission.indexOf(route.requiredPermission) > -1;
 }
 
-function hasRoleForRoute(role: UserRole, route: IRoute): boolean {
-    return role.includes(route.requiredRole);
+function hasRoleForRoute(role: UserRole[], route: IRoute): boolean {
+    return role.indexOf(route.requiredRole) > -1;
 }
 
 export { canUserAccess };
