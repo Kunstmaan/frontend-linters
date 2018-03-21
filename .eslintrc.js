@@ -34,5 +34,6 @@ module.exports = {
             ERROR,
             'never'
         ],
+        'import/prefer-default-export': OFF
     }
 }

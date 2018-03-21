@@ -27,6 +27,9 @@ Start off by reading that and then go over the rules we overwrite.
 `import/extensions`: We don't allow you to specify the extensions of imports
 * **Why?** Your build should be properly configured to handle whatever extensions you need.
 
+`import/prefer-default-export`: We don't prefer defaults exports.
+* **Why?** Default exports have more potential to lead to trouble with intellisense, and refactoring of code (renaming your imports is not a good idea).
+
 ### React-specific Rules
 
 For our React rules we also extend the [AirBnB react styleguide](https://github.com/airbnb/javascript/tree/master/react), again with several exceptions which we will elaborate on.
