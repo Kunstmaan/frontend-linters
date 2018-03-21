@@ -13,5 +13,7 @@
             true,
             4
         ],
+        "no-unused-variable": true,
+        "no-unused-expression": true,
     }
 }
