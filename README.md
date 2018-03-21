@@ -43,3 +43,6 @@ Start off by going through the standard styleguides and then read the exceptions
 
 `react/jsx-indent-props`: For jsx prop indentation we use 4 spaces
 * **Why?** Consistency with our other indentation.
+
+`react/prop-types`: Using propTypes is not mandatory
+* **Why?** Runtime validation using propTypes is only useful during development. Unless creating a component library/extensively reused components the time invested in using propTypes is not worth it.

@@ -28,6 +28,7 @@ module.exports = {
             ERROR,
             INDENTATION_SIZE
         ],
+        'react/prop-types': OFF,
 
         // Import Rules
         'import/extensions': [
