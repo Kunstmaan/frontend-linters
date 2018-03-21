@@ -1,6 +1,8 @@
 import React from 'react';
 
-function Button({ hidden }) {
+function Button({
+    hidden = false,
+}) {
     if (hidden) {
         return null;
     }
@@ -11,10 +13,6 @@ function Button({ hidden }) {
         </button>
     );
 }
-
-Button.defaultProps = {
-    hidden: false,
-};
 
 function HiddenButton() {
     return (

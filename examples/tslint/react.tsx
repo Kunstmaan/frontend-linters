@@ -4,10 +4,6 @@ interface IButtonProps {
     hidden: boolean;
 }
 
-const defaultProps: IButtonProps = {
-    hidden: false,
-};
-
 function Button({ hidden = false }: IButtonProps) {
     if (hidden) {
         return null;
