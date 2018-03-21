@@ -24,4 +24,4 @@ function HiddenButton() {
     );
 }
 
-export default HiddenButton;
+export default { HiddenButton };
