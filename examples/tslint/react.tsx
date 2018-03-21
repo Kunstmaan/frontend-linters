@@ -1,20 +1,24 @@
 import React from 'react';
 
-function Button({ hidden }) {
+interface IButtonProps {
+    hidden: boolean;
+}
+
+const defaultProps: IButtonProps = {
+    hidden: false,
+};
+
+function Button({ hidden = false }: IButtonProps) {
     if (hidden) {
         return null;
     }
 
     return (
         <button>
-            Click me!
+            Click me
         </button>
     );
 }
-
-Button.defaultProps = {
-    hidden: false,
-};
 
 function HiddenButton() {
     return (
@@ -24,4 +28,4 @@ function HiddenButton() {
     );
 }
 
-export default { HiddenButton };
+export { HiddenButton };
