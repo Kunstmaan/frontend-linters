@@ -45,11 +45,11 @@ function hasRouteAccess({
 }
 
 function hasPermissionForRoute(permission: UserPermission[], route: IRoute): boolean {
-    return permission.indexOf(route.requiredPermission) > -1;
+    return permission.includes(route.requiredPermission);
 }
 
 function hasRoleForRoute(role: UserRole[], route: IRoute): boolean {
-    return role.indexOf(route.requiredRole) > -1;
+    return role.includes(route.requiredRole);
 }
 
 export { canUserAccess };

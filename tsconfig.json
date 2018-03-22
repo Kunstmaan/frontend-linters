@@ -5,6 +5,10 @@
         "noImplicitAny": true,
         "allowSyntheticDefaultImports": true,
         "jsx": "react",
-        "target": "es5"
+        "target": "es5",
+        "lib": [
+            "es2017",
+            "dom"
+        ]
     }
 }
