@@ -2,6 +2,7 @@ import React from 'react';
 
 interface IButtonProps {
     hidden: boolean;
+    greeting: () => string;
 }
 
 function Button({ hidden = false }: IButtonProps) {

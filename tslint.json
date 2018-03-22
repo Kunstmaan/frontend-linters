@@ -4,6 +4,10 @@
         "tslint-react"
     ],
     "rules": {
+        "semicolon": [
+            true,
+            "always"
+        ],
         "indent": [
             true,
             "spaces",
@@ -15,5 +19,6 @@
         ],
         "no-unused-variable": true,
         "no-unused-expression": true,
+        "function-name": false
     }
 }
