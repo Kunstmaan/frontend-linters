@@ -19,6 +19,8 @@
         ],
         "no-unused-variable": true,
         "no-unused-expression": true,
-        "function-name": false
+        "function-name": false,
+        "import-name": false,
+        "jsx-boolean-value": false
     }
 }

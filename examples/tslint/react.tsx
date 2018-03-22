@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 interface IButtonProps {
     hidden: boolean;
-    greeting: () => string;
+    greeting?: () => string;
 }
 
 function Button({ hidden = false }: IButtonProps) {
@@ -17,12 +17,16 @@ function Button({ hidden = false }: IButtonProps) {
     );
 }
 
-function HiddenButton() {
-    return (
-        <Button
-            hidden
-        />
-    );
+class HiddenButton extends Component {
+    textInput: HTMLInputElement;
+
+    public render() {
+        return (
+            <Button
+                hidden
+            />
+        );
+    }
 }
 
 export { HiddenButton };
