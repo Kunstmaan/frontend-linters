@@ -1,0 +1,21 @@
+{
+  "name": "@kunstmaan/tslint-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tslint.json",
+  "dependencies": {
+    "tslint": "^5.9.1",
+    "tslint-config-airbnb": "^5.8.0",
+    "tslint-react": "^3.5.1",
+    "typescript": "^2.7.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.0.40",
+    "react": "^16.2.0"
+  },
+  "scripts": {
+    "tslint": "tslint examples/**"
+  },
+  "author": "",
+  "license": "ISC"
+}

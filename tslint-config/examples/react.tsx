@@ -5,27 +5,30 @@ interface IButtonProps {
     greeting?: () => string;
 }
 
-function Button({ hidden = false }: IButtonProps) {
+function Button({ hidden = false, greeting }: IButtonProps) {
     if (hidden) {
         return null;
     }
 
     return (
-        <button>
+        <button onClick={greeting}>
             Click me
         </button>
     );
 }
 
 class HiddenButton extends Component {
-    textInput: HTMLInputElement;
-
     public render() {
         return (
             <Button
                 hidden
+                greeting={this.sayHello}
             />
         );
+    }
+
+    private sayHello() {
+        return 'Hello';
     }
 }
 
