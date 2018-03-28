@@ -34,3 +34,28 @@ function hasRolesForRoute(roles, route) {
 }
 
 export { canUserAccess };
+
+/**
+ * Bad example, but shows the syntax - we do not allow fallthrough,
+ * and we indent case deeper than switch
+ */
+function isPowerUserRole(role) {
+    let isPowerUser = false;
+
+    switch (role) {
+        case 'Employee': {
+            isPowerUser = false;
+            break;
+        }
+        case 'Manager': {
+            isPowerUser = true;
+            break;
+        }
+        default:
+            isPowerUser = false;
+    }
+
+    return isPowerUser;
+}
+
+console.log(isPowerUserRole('Employee'));

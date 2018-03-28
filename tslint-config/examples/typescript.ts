@@ -4,13 +4,11 @@ type UserPermission = 'Allowed' | 'Blocked';
 interface IUser {
     roles: UserRole[];
     permissions: UserPermission[];
-    // Other stuff
 }
 
 interface IRoute {
     requiredRole: UserRole;
     requiredPermission: UserPermission;
-    // Other stuff
 }
 
 function canUserAccess(user: IUser, route: IRoute) {
@@ -53,3 +51,28 @@ function hasRoleForRoute(role: UserRole[], route: IRoute): boolean {
 }
 
 export { canUserAccess };
+
+/**
+ * Bad example, but shows the syntax - we do not allow fallthrough,
+ * and we indent case deeper than switch
+ */
+function isPowerUserRole(role: UserRole): boolean {
+    let isPowerUser = false;
+
+    switch (role) {
+        case 'Employee': {
+            isPowerUser = false;
+            break;
+        }
+        case 'Manager': {
+            isPowerUser = true;
+            break;
+        }
+        default:
+            isPowerUser = false;
+    }
+
+    return isPowerUser;
+}
+
+console.log(isPowerUserRole('Employee'));

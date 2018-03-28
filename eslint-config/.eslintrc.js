@@ -10,7 +10,8 @@ module.exports = {
         // Javascript Rules
         'indent': [
             WARNING,
-            INDENTATION_SIZE
+            INDENTATION_SIZE,
+            { 'SwitchCase': 1 }
         ],
         'max-len': [
             ERROR,
