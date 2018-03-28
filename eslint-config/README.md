@@ -22,7 +22,10 @@ Start off by reading that and then go over the rules we overwrite.
 * **Why?** Using `function` allows us to write out code in a certain way (will be elaborated on in the next rule), and allows you to explicitely discern functions from variables. NOTE: Callbacks should be arrow functions, and if you need `this` binding for any reason there is no rule against arrow functions.
 
 `no-use-before-define`: We **don't** follow Airbnb's rule about function definition before invocation
-* **Why?** Code is more readable when you can define your 'top level' functions (functions that will delegate their logic to other functions) above, and define 'detail' functions below. This way your code will make sense chronologically and you be able to consistently easily navigate your files.
+* **Why?** Code is more readable when you can define your 'top level' functions (functions that will delegate their logic to other functions) above, and define 'detail' functions below. This way your code will make sense chronologically and you be able to consistently easily navigate your files. (This is applicable only to `function`, and not to `class`).
+
+`arrow-parens`: We enforce parenthesis around **every** parameter in arrow functions, even if the function only has 1.
+* **Why?** This will allow for more consistent syntax regardless of the # of arguments a function takes, aswell as consistency with TypeScript where typed arguments **need** to have parenthesis around them.
 
 `import/extensions`: We don't allow you to specify the extensions of imports
 * **Why?** Your build should be properly configured to handle whatever extensions you need.

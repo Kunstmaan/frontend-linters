@@ -1,7 +1,7 @@
 {
   "name": "@kunstmaan/tslint-config",
   "version": "1.0.0",
-  "description": "",
+  "description": "Kunstmaan's shareable TSLint configuration. Based on AirBnB's JavaScript and React styleguides with some custom flavours.",
   "main": "tslint.json",
   "dependencies": {
     "tslint": "^5.9.1",

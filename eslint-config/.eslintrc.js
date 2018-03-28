@@ -17,7 +17,17 @@ module.exports = {
             120
         ],
         'no-console': OFF,
-        'no-use-before-define': OFF,
+        'no-use-before-define': [
+            ERROR,
+            {
+                'functions': false,
+                'classes': true
+            }
+        ],
+        'arrow-parens': [
+            ERROR,
+            'always'
+        ],
 
         // React Rules
         'react/jsx-indent': [
