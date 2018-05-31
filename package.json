@@ -1,0 +1,7 @@
+{
+  "name": "@kunstmaan/linters",
+  "version": "1.0.0",
+  "description": "Kunstmaan's shareable linter configurations.",
+  "author": "Kunstmaan front-end development team",
+  "license": "ISC"
+}
