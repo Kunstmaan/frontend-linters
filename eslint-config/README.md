@@ -1,13 +1,12 @@
-# Kunstmaan JavaScript
+# Kunstmaan ESLint
 
-
-### JavaScript Rules
+## JavaScript Rules
 
 For JavaScript we extend the [AirBnB styleguide](https://github.com/airbnb/javascript) with some exceptions.
 
 Start off by reading that and then go over the rules we overwrite.
 
-##### Custom Rules
+#### Custom Rules
 
 `indent`: For code indentation we use 4 spaces
 * **Why?** 2 spaces is a relic from callback hell - 4 is more readable and generally is the standard in other languages.
@@ -33,13 +32,13 @@ Start off by reading that and then go over the rules we overwrite.
 `import/prefer-default-export`: We don't prefer defaults exports.
 * **Why?** Default exports have more potential to lead to trouble with intellisense, and refactoring of code (renaming your imports is not a good idea).
 
-### React-specific Rules
+## React-specific Rules
 
 For our React rules we also extend the [AirBnB react styleguide](https://github.com/airbnb/javascript/tree/master/react), again with several exceptions which we will elaborate on.
 
 Start off by going through the standard styleguides and then read the exceptions.
 
-##### Custom Rules
+#### Custom Rules
 
 `react/jsx-indent`: For jsx indentation we use 4 spaces
 * **Why?** Consistency with our other indentation.
