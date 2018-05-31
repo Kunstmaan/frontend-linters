@@ -3,5 +3,10 @@
   "version": "1.0.0",
   "description": "Kunstmaan's shareable linter configurations.",
   "author": "Kunstmaan front-end development team",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "eslint-config-airbnb": "^16.1.0",
+    "tslint-config-airbnb": "^5.9.2",
+    "tslint-react": "^3.6.0"
+  }
 }
