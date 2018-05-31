@@ -1,10 +1,27 @@
 # Kunstmaan ESLint
 
+## Usage
+
+```
+npm install @kunstmaan/eslint-config --save-dev
+```
+
+Update your `.eslintrc` file:
+
+```json
+{
+  "extends": ["./node_modules/@kunstmaan/eslint-config/index.js"],
+  "rules": {
+      
+  }
+}
+```
+
+You can add overwrites inside the `rules` section.
+
 ## JavaScript Rules
 
 For JavaScript we extend the [AirBnB styleguide](https://github.com/airbnb/javascript) with some exceptions.
-
-Start off by reading that and then go over the rules we overwrite.
 
 #### Custom Rules
 
@@ -35,8 +52,6 @@ Start off by reading that and then go over the rules we overwrite.
 ## React-specific Rules
 
 For our React rules we also extend the [AirBnB react styleguide](https://github.com/airbnb/javascript/tree/master/react), again with several exceptions which we will elaborate on.
-
-Start off by going through the standard styleguides and then read the exceptions.
 
 #### Custom Rules
 

@@ -1,5 +1,24 @@
 # Kunstmaan TSLint
 
+## Usage
+
+```
+npm install @kunstmaan/tslint-config --save-dev
+```
+
+Update your `tslint.json` file:
+
+```json
+{
+  "extends": ["./node_modules/@kunstmaan/tslint-config/tslint.json"],
+  "rules": {
+
+  }
+}
+```
+
+You can add overwrites inside the `rules` section.
+
 ## TypeScript Rules
 
 For TypeScript we extend the [AirBnB styleguide](https://github.com/airbnb/javascript) with some exceptions.

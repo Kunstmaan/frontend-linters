@@ -4,17 +4,17 @@
   "description": "Kunstmaan's shareable TSLint configuration. Based on AirBnB's JavaScript and React styleguides with some custom flavours.",
   "main": "tslint.json",
   "dependencies": {
-    "tslint": "^5.9.1",
-    "tslint-config-airbnb": "^5.8.0",
-    "tslint-react": "^3.5.1",
-    "typescript": "^2.7.2"
+    "tslint": "^5.10.0",
+    "tslint-config-airbnb": "^5.9.2",
+    "tslint-react": "^3.6.0",
+    "typescript": "^2.8.4"
   },
   "devDependencies": {
-    "@types/react": "^16.0.40",
-    "react": "^16.2.0"
+    "@types/react": "^16.3.14",
+    "react": "^16.4.0"
   },
   "scripts": {
-    "tslint": "tslint examples/**"
+    "test": "tslint examples/**"
   },
   "author": "",
   "license": "ISC"
