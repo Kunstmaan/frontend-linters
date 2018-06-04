@@ -18,6 +18,7 @@
             4,
             { "SwitchCase": 1 }
         ],
+        "max-line-length": [true, 120],
         "no-unused-variable": true,
         "no-unused-expression": true,
         "no-switch-case-fall-through": true,
