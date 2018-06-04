@@ -24,6 +24,8 @@
         "no-switch-case-fall-through": true,
         "function-name": false,
         "import-name": false,
-        "jsx-boolean-value": false
+        "jsx-boolean-value": false,
+        "variable-name": [true, "allow-pascal-case"],
+        "ter-arrow-parens": ["error", "always"]
     }
 }
