@@ -2,8 +2,8 @@
   "name": "@kunstmaan/linters",
   "version": "1.0.0",
   "description": "Kunstmaan's shareable linter configurations.",
-  "author": "Kunstmaan front-end development team",
-  "license": "ISC",
+  "author": "Kunstmaan",
+  "license": "MIT",
   "dependencies": {
     "eslint-config-airbnb": "^16.1.0",
     "tslint-config-airbnb": "^5.9.2",
