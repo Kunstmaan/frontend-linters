@@ -12,12 +12,12 @@ Update your `.eslintrc` file:
 {
   "extends": ["./node_modules/@kunstmaan/eslint-config/index.js"],
   "rules": {
-      
+
   }
 }
 ```
 
-You can add overwrites inside the `rules` section.
+You can add overrides inside the `rules` section.
 
 ## JavaScript Rules
 

@@ -17,7 +17,7 @@ Update your `tslint.json` file:
 }
 ```
 
-You can add overwrites inside the `rules` section.
+You can add overrides inside the `rules` section.
 
 ## TypeScript Rules
 
