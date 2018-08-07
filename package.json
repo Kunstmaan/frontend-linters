@@ -1,12 +1,26 @@
 {
-  "name": "@kunstmaan/linters",
+  "name": "@kunstmaan/frontend-linters",
   "version": "1.0.0",
-  "description": "Kunstmaan's shareable linter configurations.",
-  "author": "Kunstmaan",
-  "license": "MIT",
+  "description": "Kunstmaan's shareable linter configurations",
   "dependencies": {
     "eslint-config-airbnb": "^16.1.0",
     "tslint-config-airbnb": "^5.9.2",
     "tslint-react": "^3.6.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kunstmaan/frontend-linters.git"
+  },
+  "keywords": [
+    "linting",
+    "eslint",
+    "tslint",
+    "kunstmaan"
+  ],
+  "author": "Kunstmaan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kunstmaan/frontend-linters/issues"
+  },
+  "homepage": "https://github.com/Kunstmaan/frontend-linters#readme"
 }
