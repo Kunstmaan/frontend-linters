@@ -1,0 +1,31 @@
+{
+  "name": "@kunstmnaan/stylelint-config",
+  "version": "1.0.0",
+  "description": "Kunstmaan's shareable StyleLint config. Based on the StyleLint standard config with some customization and usage of the stylelint order plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "stylelint examples/styles.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kunstmaan/frontend-linters.git"
+  },
+  "keywords": [
+    "stylelint",
+    "kunstmaan",
+    "linter"
+  ],
+  "author": "Kunstmaan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kunstmaan/frontend-linters/issues"
+  },
+  "homepage": "https://github.com/Kunstmaan/frontend-linters#readme",
+  "dependencies": {
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^0.8.1"
+  },
+  "devDependencies": {
+    "stylelint": "^9.4.0"
+  }
+}
