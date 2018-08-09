@@ -29,6 +29,12 @@ module.exports = {
             ERROR,
             'always'
         ],
+        'no-plusplus': [
+            ERROR,
+            {
+                'allowForLoopAfterthoughts': true
+            }
+        ],
 
         // React Rules
         'react/jsx-indent': [
