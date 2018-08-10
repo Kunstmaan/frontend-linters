@@ -1,6 +1,6 @@
 {
   "name": "@kunstmaan/eslint-config",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Kunstmaan's shareable ESLint configuration. Based on AirBnB's JavaScript and React styleguides with some custom flavours.",
   "main": "index.js",
   "dependencies": {
