@@ -23,7 +23,8 @@
   "homepage": "https://github.com/Kunstmaan/frontend-linters#readme",
   "dependencies": {
     "stylelint-config-standard": "^18.2.0",
-    "stylelint-order": "^0.8.1"
+    "stylelint-order": "^0.8.1",
+    "stylelint-scss": "^3.3.0"
   },
   "devDependencies": {
     "stylelint": "^9.4.0"
