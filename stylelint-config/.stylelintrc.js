@@ -108,7 +108,9 @@ module.exports = {
                     "background-origin",
                     "background-position",
                     "background-repeat",
-                    "background-size"
+                    "background-size",
+                    "box-shadow",
+                    "opacity"
                 ]
             },
             {
