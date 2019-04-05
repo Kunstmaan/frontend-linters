@@ -4,7 +4,7 @@
   "description": "Kunstmaan's shareable ESLint configuration for TypeScript. Based on AirBnB's JavaScript and React styleguides with some custom flavours.",
   "main": "tslint.json",
   "dependencies": {
-    "@kunstmaan/eslint-config": "^1.1.0",
+    "@kunstmaan/eslint-config": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^1.6.0",
     "eslint-config-airbnb-typescript": "^1.1.0"
   },
