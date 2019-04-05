@@ -46,6 +46,45 @@ module.exports = {
             INDENTATION_SIZE
         ],
         'react/prop-types': OFF,
+        'react/sort-comp': [ERROR, {
+            order: [
+                'static-methods',
+                'instance-variables',
+                'render',
+                'lifecycle',
+                'everything-else',
+            ],
+            groups: {
+                lifecycle: [
+                    'displayName',
+                    'propTypes',
+                    'contextTypes',
+                    'childContextTypes',
+                    'mixins',
+                    'statics',
+                    'defaultProps',
+                    'constructor',
+                    'getDefaultProps',
+                    'state',
+                    'getInitialState',
+                    'getChildContext',
+                    'getDerivedStateFromProps',
+                    'componentWillMount',
+                    'UNSAFE_componentWillMount',
+                    'componentDidMount',
+                    'componentWillReceiveProps',
+                    'UNSAFE_componentWillReceiveProps',
+                    'shouldComponentUpdate',
+                    'componentWillUpdate',
+                    'UNSAFE_componentWillUpdate',
+                    'getSnapshotBeforeUpdate',
+                    'componentDidUpdate',
+                    'componentDidCatch',
+                    'componentWillUnmount'
+                ]
+            }
+          }
+        ],
 
         // Import Rules
         'import/extensions': [

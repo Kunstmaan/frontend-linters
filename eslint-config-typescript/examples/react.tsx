@@ -1,4 +1,6 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React, { Component } from 'react';
+/* eslint-enable import/no-extraneous-dependencies */
 
 interface IButtonProps {
     hidden: boolean;
@@ -11,13 +13,15 @@ function Button({ hidden = false, greeting }: IButtonProps) {
     }
 
     return (
-        <button onClick={greeting}>
+        <button type="button" onClick={greeting}>
             Click me
         </button>
     );
 }
 
 class HiddenButton extends Component {
+    private HELLO = 'Hello';
+
     public render() {
         return (
             <Button
@@ -28,7 +32,7 @@ class HiddenButton extends Component {
     }
 
     private sayHello() {
-        return 'Hello';
+        return this.HELLO;
     }
 }
 
