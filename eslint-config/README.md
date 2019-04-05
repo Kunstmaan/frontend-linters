@@ -63,3 +63,6 @@ For our React rules we also extend the [AirBnB react styleguide](https://github.
 
 `react/prop-types`: Using propTypes is not mandatory
 * **Why?** Runtime validation using propTypes is only useful during development. Unless creating a component library/extensively reused components the time invested in using propTypes is not worth it.
+
+`react/sort-comp`: For ordering component data we first put the static methods / variables followed by the instance variables, render method, lifecycle methods and any other method.
+* **Why?** We consider the render method to be more important so we like to have it first. We also want to see the instance variables before any other instance method.
