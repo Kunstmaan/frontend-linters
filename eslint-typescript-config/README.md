@@ -3,16 +3,16 @@
 ## Usage
 
 ```
-npm install @kunstmaan/eslint-config-typescript --save-dev
+npm install @kunstmaan/eslint-typescript-config --save-dev
 ```
 
 Update your `.eslintrc` file:
 
 ```json
 {
-  "parser": '@typescript-eslint/parser',
-  "plugins": ['@typescript-eslint'],
-  "extends": ["./node_modules/@kunstmaan/eslint-config-typescript/index.js"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": ["./node_modules/@kunstmaan/eslint-typescript-config/index.js"],
   "rules": {
 
   }

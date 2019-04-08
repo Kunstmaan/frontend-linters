@@ -2,7 +2,8 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     plugins: ['@typescript-eslint'],
     extends: [
+        'plugin:@typescript-eslint/recommended',
         'airbnb-typescript',
-        './node_modules/@kunstmaan/eslint-config/index.js'
+        '@kunstmaan/eslint-config'
     ],
 }
