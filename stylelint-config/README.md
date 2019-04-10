@@ -18,7 +18,7 @@ You can add overrides inside the `rules` section.
 
 ## Basic rules
 
-For our basic rules we've extended the [stylelint-standard-config](https://github.com/stylelint/stylelint-config-standard) and added the [stylelint-order plugin](https://github.com/hudochenkov/stylelint-order)
+For our basic rules we've extended the [stylelint-standard-config](https://github.com/stylelint/stylelint-config-standard) and added the [stylelint-order](https://github.com/hudochenkov/stylelint-order) and [stylelint-scss](https://github.com/kristerkari/stylelint-scss) plugins
 
 ## Custom rules
 
@@ -28,9 +28,12 @@ For custom rules it's best to check the [.stylelintrc.js](./.stylelintrc.js) fil
 We expect the following order of properties inside a selector.
 ```css
 selector {
-
     @include
     @extend
+
+    --custom-prop
+
+    $dollar-vars
 
     content
 
@@ -57,6 +60,8 @@ selector {
     transform
 
     background
+    box-shadow
+    opacity
 
     border
     outline
@@ -69,9 +74,16 @@ selector {
     word
 
     list-style
-
     transition
     will-change
     perspective
+
+    &:pseudo-classes {
+    }
+
+    nested-selector {
+    }
+
+    @media
 }
 ```

@@ -39,15 +39,41 @@ module.exports = {
         "at-rule-no-unknown": null,
         "max-nesting-depth": 7,
         "no-descending-specificity": null,
+        "order/order": [
+            {
+                "type": "at-rule",
+                "name": "extend"
+            },
+            {
+                "type": "at-rule",
+                "name": "include",
+                "hasBlock": false
+            },
+            "custom-properties",
+            "dollar-variables",
+            "declarations",
+            {
+                "type": "rule",
+                "selector": /^&:[\w-]+$/,
+            },
+            "rules",
+            {
+                "type": "at-rule",
+                "name": "media"
+            }
+        ],
         "order/properties-order": [
             {
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": [
                     "content"
                 ]
             },
             {
+                "groupName": "Position",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "order": "flexible",
                 "properties": [
                     "float",
@@ -60,7 +86,9 @@ module.exports = {
                 ]
             },
             {
+                "groupName": "Box Model",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "order": "flexible",
                 "properties": [
                     "display",
@@ -96,7 +124,9 @@ module.exports = {
                 ]
             },
             {
+                "groupName": "Visual Box",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "order": "flexible",
                 "properties": [
                     "background",
@@ -114,7 +144,9 @@ module.exports = {
                 ]
             },
             {
+                "groupName": "Border",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "order": "flexible",
                 "properties": [
                     "border",
@@ -174,7 +206,9 @@ module.exports = {
                 ]
             },
             {
+                "groupName": "Typography",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "order": "flexible",
                 "properties": [
                     "color",
@@ -192,16 +226,12 @@ module.exports = {
                 ]
             },
             {
+                "groupName": "Misc",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "order": "flexible",
                 "properties": [
-                    "list-style"
-                ]
-            },
-            {
-                "emptyLineBefore": "always",
-                "order": "flexible",
-                "properties": [
+                    "list-style",
                     "transition",
                     "will-change",
                     "perspective"
