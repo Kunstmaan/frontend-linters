@@ -1,57 +1,44 @@
 const OFF = 0;
-const WARNING = 1;
+const WARN = 1;
 const ERROR = 2;
 
 const INDENTATION_SIZE = 4;
 
 module.exports = {
-    extends: ['airbnb'],
+    extends: [
+        'airbnb',
+        'airbnb/hooks',
+    ],
     rules: {
         // Javascript Rules
-        'indent': [
-            WARNING,
-            INDENTATION_SIZE,
-            { 'SwitchCase': 1 }
-        ],
-        'max-len': [
-            ERROR,
-            120
-        ],
+        'arrow-parens': [ERROR, 'always'],
+        'function-paren-newline': [ERROR, 'consistent'],
+        'implicit-arrow-linebreak': [OFF],
+        'indent': [WARN, INDENTATION_SIZE, { SwitchCase: 1 } ],
+        'max-len': [ERROR, 120],
         'no-console': OFF,
-        'no-use-before-define': [
-            ERROR,
-            {
-                'functions': false,
-                'classes': true
-            }
-        ],
-        'arrow-parens': [
-            ERROR,
-            'always'
-        ],
-        'no-plusplus': [
-            ERROR,
-            {
-                'allowForLoopAfterthoughts': true
-            }
-        ],
+        'no-nested-ternary': [OFF],
+        'no-plusplus': [ERROR, { allowForLoopAfterthoughts: true }],
+        'no-unused-expressions': [ERROR, { allowShortCircuit: true, allowTernary: true }],
+        'no-unused-vars': [ERROR, { vars: 'all', args: 'after-used', ignoreRestSiblings: true }],
+        'no-use-before-define': [ERROR, { functions: false, classes: true }],
+        'object-curly-newline': [OFF],
+
+        // JSX Rules
+        'jsx-a11y/label-has-for': [OFF],
 
         // React Rules
-        'react/jsx-indent': [
-            ERROR,
-            INDENTATION_SIZE
-        ],
-        'react/jsx-indent-props': [
-            ERROR,
-            INDENTATION_SIZE
-        ],
+        'react/destructuring-assignment': [OFF],
+        'react/jsx-indent': [ERROR, INDENTATION_SIZE],
+        'react/jsx-indent-props': [ERROR, INDENTATION_SIZE],
         'react/prop-types': OFF,
         'react/sort-comp': [ERROR, {
             order: [
+                'static-variables',
                 'static-methods',
                 'instance-variables',
-                'render',
                 'lifecycle',
+                'render',
                 'everything-else',
             ],
             groups: {
@@ -87,10 +74,7 @@ module.exports = {
         ],
 
         // Import Rules
-        'import/extensions': [
-            ERROR,
-            'never'
-        ],
+        'import/extensions': [ERROR, 'never'],
         'import/prefer-default-export': OFF
     }
 }

@@ -3,18 +3,19 @@
   "version": "1.2.0",
   "description": "Kunstmaan's shareable ESLint configuration. Based on AirBnB's JavaScript and React styleguides with some custom flavours.",
   "main": "index.js",
+  "scripts": {
+    "test": "eslint --ext .js,.jsx examples"
+  },
   "dependencies": {
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.8.2"
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.3.0"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "react": "^16.4.0"
-  },
-  "scripts": {
-    "test": "eslint examples"
+    "eslint": "^6.8.0",
+    "react": "^16.8.4"
   },
   "author": "Kunstmaan front-end development team",
   "license": "ISC"

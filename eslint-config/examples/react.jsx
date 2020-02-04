@@ -15,7 +15,7 @@ function Button({
     }
 
     return (
-        <button>
+        <button type="button">
             Click me!
         </button>
     );
@@ -28,10 +28,6 @@ class HiddenButton extends Component {
         this.sayHello = this.sayHello.bind(this);
     }
 
-    sayHello() {
-        return this.props.greeting;
-    }
-
     render() {
         return (
             <Button
@@ -39,6 +35,10 @@ class HiddenButton extends Component {
                 onClick={this.sayHello}
             />
         );
+    }
+
+    sayHello() {
+        return this.props.greeting;
     }
 }
 
