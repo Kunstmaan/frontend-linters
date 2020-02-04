@@ -4,7 +4,8 @@
   "description": "Kunstmaan's shareable StyleLint config. Based on the StyleLint standard config with some customization and usage of the stylelint order plugin",
   "main": "index.js",
   "scripts": {
-    "test": "stylelint examples/styles.scss"
+    "test": "stylelint examples/styles.scss",
+    "preversion": "npm test"
   },
   "repository": {
     "type": "git",
@@ -15,17 +16,17 @@
     "kunstmaan",
     "linter"
   ],
-  "author": "Kunstmaan",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Kunstmaan/frontend-linters/issues"
-  },
-  "homepage": "https://github.com/Kunstmaan/frontend-linters#readme",
   "dependencies": {
     "stylelint-config-standard": "^18.2.0",
     "stylelint-order": "^2.2.1",
     "stylelint-scss": "^3.3.0",
     "stylelint": "^9.10.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "author": "Kunstmaan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kunstmaan/frontend-linters/issues"
+  },
+  "homepage": "https://github.com/Kunstmaan/frontend-linters#readme"
 }
