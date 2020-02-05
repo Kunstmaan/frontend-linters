@@ -7,17 +7,7 @@ interface IButtonProps {
     greeting?: () => string;
 }
 
-function Button({ hidden = false, greeting }: IButtonProps) {
-    if (hidden) {
-        return null;
-    }
-
-    return (
-        <button type="button" onClick={greeting}>
-            Click me
-        </button>
-    );
-}
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 
 class HiddenButton extends Component {
     private HELLO = 'Hello';
@@ -37,3 +27,17 @@ class HiddenButton extends Component {
 }
 
 export { HiddenButton };
+
+function Button({ hidden = false, greeting }: IButtonProps) {
+    if (hidden) {
+        return null;
+    }
+
+    return (
+        <button type="button" onClick={greeting}>
+            Click me
+        </button>
+    );
+}
+
+/* eslint-enable @typescript-eslint/explicit-function-return-type */

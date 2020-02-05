@@ -11,7 +11,9 @@ interface IRoute {
     requiredPermission: UserPermission;
 }
 
-function canUserAccess(user: IUser, route: IRoute) {
+export { canUserAccess };
+
+function canUserAccess(user: IUser, route: IRoute): boolean {
     const permissions = getUserPermissions(user);
     const roles = getUserRoles(user);
 
@@ -35,9 +37,9 @@ function hasRouteAccess({
     roles,
     route,
 }: {
-    permissions: UserPermission[],
-    roles: UserRole[],
-    route: IRoute,
+    permissions: UserPermission[];
+    roles: UserRole[];
+    route: IRoute;
 }): boolean {
     return hasPermissionForRoute(permissions, route) && hasRoleForRoute(roles, route);
 }
@@ -49,8 +51,6 @@ function hasPermissionForRoute(permission: UserPermission[], route: IRoute): boo
 function hasRoleForRoute(role: UserRole[], route: IRoute): boolean {
     return role.includes(route.requiredRole);
 }
-
-export { canUserAccess };
 
 /**
  * Bad example, but shows the syntax - we do not allow fallthrough,
