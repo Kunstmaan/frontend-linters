@@ -10,7 +10,10 @@ module.exports = {
     extends: [
         'plugin:@typescript-eslint/recommended',
         'airbnb-typescript',
-        '@kunstmaan/eslint-config'
+        '@kunstmaan/eslint-config',
+        'plugin:import/errors',
+        'plugin:import/warnings',
+        'plugin:import/typescript',
     ],
     rules: {
         // React Rules
