@@ -61,6 +61,11 @@ For our React rules we also extend the [AirBnB react styleguide](https://github.
 `react/jsx-indent-props`: For jsx prop indentation we use 4 spaces
 * **Why?** Consistency with our other indentation.
 
+`react/jsx-props-no-spreading`: Allow JSX props spreading
+
+`react/require-default-props`: We don't require defaultProps
+* **Whu?** defaultProps will be deprecate on function components
+
 `react/prop-types`: Using propTypes is not mandatory
 * **Why?** Runtime validation using propTypes is only useful during development. Unless creating a component library/extensively reused components the time invested in using propTypes is not worth it.
 

@@ -9,14 +9,17 @@ npm install @kunstmaan/eslint-typescript-config --save-dev
 Update your `.eslintrc` file:
 
 ```json
-{
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
-  "extends": ["./node_modules/@kunstmaan/eslint-typescript-config/index.js"],
-  "rules": {
+overrides: [
+  {
+    "files": ['*.ts', '*.tsx'],
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "extends": ["./node_modules/@kunstmaan/eslint-typescript-config/index.js"],
+    "rules": {
 
+    }
   }
-}
+]
 ```
 
 You can add overrides inside the `rules` section.

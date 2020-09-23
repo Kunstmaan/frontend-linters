@@ -31,7 +31,10 @@ module.exports = {
         'react/destructuring-assignment': [OFF],
         'react/jsx-indent': [ERROR, INDENTATION_SIZE],
         'react/jsx-indent-props': [ERROR, INDENTATION_SIZE],
+        'react/jsx-no-undef': [ERROR, { allowGlobals: true }],
+        'react/jsx-props-no-spreading': [OFF],
         'react/prop-types': OFF,
+        'react/require-default-props': [ERROR, { ignoreFunctionalComponents: true }],
         'react/sort-comp': [ERROR, {
             order: [
                 'static-variables',

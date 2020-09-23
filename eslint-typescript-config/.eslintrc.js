@@ -16,12 +16,23 @@ module.exports = {
         'plugin:import/typescript',
     ],
     rules: {
+        // Fix no-use-before-define rule
+        // see: https://github.com/typescript-eslint/typescript-eslint/issues/2502#issuecomment-689595020
+        'no-use-before-define': [OFF],
+        '@typescript-eslint/no-use-before-define': [ERROR],
+        'no-shadow': [OFF],
+        '@typescript-eslint/no-shadow': ["error", { ignoreTypeValueShadow: true }],
+        'no-undef': [OFF],
+        'no-unused-vars': [OFF],
+        '@typescript-eslint/no-unused-vars': [ERROR, { vars: 'all', args: 'none', ignoreRestSiblings: true }],
+
         // React Rules
         'react/jsx-filename-extension': [ERROR, { extensions: ['.jsx', '.tsx'] }],
 
         // Typescript Rules
-        /** "explicit-function-return-type" can be off for apps, but should be on for libraries! */
-        // '@typescript-eslint/explicit-function-return-type': [OFF],
+        /** 'explicit-function-return-type' can be off for apps, but should be on for libraries! */
+        '@typescript-eslint/explicit-function-return-type': [OFF],
+        '@typescript-eslint/explicit-module-boundary-types': [OFF],
         '@typescript-eslint/indent': [ERROR, INDENTATION_SIZE, {
             SwitchCase: 1,
             VariableDeclarator: 1,
@@ -35,10 +46,14 @@ module.exports = {
             ImportDeclaration: 'first',
             flatTernaryExpressions: false,
         }],
-        '@typescript-eslint/interface-name-prefix': [ERROR, 'always'],
+        '@typescript-eslint/naming-convention': [ERROR, {
+            selector: 'interface',
+            format: ['PascalCase'],
+            custom: {
+                regex: '^I[A-Z]',
+                match: true,
+            }
+        }],
         '@typescript-eslint/no-use-before-define': [ERROR, { functions: false, classes: true }],
-        // '@typescript-eslint/no-object-literal-type-assertion': [ERROR, {
-        //     allowAsParameter: true,
-        // }],
     }
 }
