@@ -1,6 +1,6 @@
 {
   "name": "@kunstmaan/stylelint-config",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Kunstmaan's shareable StyleLint config. Based on the StyleLint standard config with some customization and usage of the stylelint order plugin",
   "main": "index.js",
   "scripts": {

@@ -215,11 +215,13 @@ module.exports = {
                     "font-family",
                     "font-size",
                     "font-style",
+                    "font-variant",
                     "font-weight",
                     "line-height",
                     "text-align",
                     "text-decoration",
                     "text-transform",
+                    "vertical-align",
                     "white-space",
                     "word-break",
                     "word-wrap"
