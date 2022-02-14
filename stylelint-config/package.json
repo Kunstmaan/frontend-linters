@@ -1,6 +1,6 @@
 {
   "name": "@kunstmaan/stylelint-config",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Kunstmaan's shareable StyleLint config. Based on the StyleLint standard config with some customization and usage of the stylelint order plugin",
   "main": "index.js",
   "scripts": {
@@ -17,10 +17,10 @@
     "linter"
   ],
   "dependencies": {
-    "stylelint": "^13.7.2",
-    "stylelint-config-standard": "^20.0.0",
-    "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.18.0"
+    "stylelint": "^14.4.0",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.1.0"
   },
   "devDependencies": {},
   "author": "Kunstmaan",

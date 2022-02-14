@@ -1,16 +1,16 @@
-# Kunstmaan ESLint
+# Kunstmaan ESLint for React
 
 ## Usage
 
 ```
-npm install @kunstmaan/eslint-config --save-dev
+npm install @kunstmaan/eslint-react-config --save-dev
 ```
 
 Update your `.eslintrc` file:
 
 ```json
 {
-  "extends": ["./node_modules/@kunstmaan/eslint-config/index.js"],
+  "extends": ["./node_modules/@kunstmaan/eslint-react-config/index.js"],
   "rules": {
 
   }
@@ -48,3 +48,21 @@ For JavaScript we extend the [AirBnB styleguide](https://github.com/airbnb/javas
 
 `import/prefer-default-export`: We don't prefer defaults exports.
 * **Why?** Default exports have more potential to lead to trouble with intellisense, and refactoring of code (renaming your imports is not a good idea).
+
+## React-specific Rules
+
+For our React rules we also extend the [AirBnB react styleguide](https://github.com/airbnb/javascript/tree/master/react), again with several exceptions which we will elaborate on.
+
+#### Custom Rules
+
+`react/jsx-indent`: For jsx indentation we use 4 spaces
+* **Why?** Consistency with our other indentation.
+
+`react/jsx-indent-props`: For jsx prop indentation we use 4 spaces
+* **Why?** Consistency with our other indentation.
+
+`react/prop-types`: Using propTypes is not mandatory
+* **Why?** Runtime validation using propTypes is only useful during development. Unless creating a component library/extensively reused components the time invested in using propTypes is not worth it.
+
+`react/sort-comp`: For ordering component data we first put the static methods / variables followed by the instance variables, render method, lifecycle methods and any other method.
+* **Why?** We consider the render method to be more important so we like to have it first. We also want to see the instance variables before any other instance method.

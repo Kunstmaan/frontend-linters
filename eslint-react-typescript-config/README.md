@@ -1,9 +1,9 @@
-# Kunstmaan ESLint for TypeScript
+# Kunstmaan ESLint for React TypeScript
 
 ## Usage
 
 ```
-npm install @kunstmaan/eslint-typescript-config --save-dev
+npm install @kunstmaan/eslint-react-typescript-config --save-dev
 ```
 
 Update your `.eslintrc` file:
@@ -12,7 +12,7 @@ Update your `.eslintrc` file:
 {
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
-  "extends": ["./node_modules/@kunstmaan/eslint-typescript-config/index.js"],
+  "extends": ["./node_modules/@kunstmaan/eslint-react-typescript-config/index.js"],
   "rules": {
 
   }

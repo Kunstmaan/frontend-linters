@@ -3,42 +3,34 @@ module.exports = {
         "stylelint-order",
         "stylelint-scss"
     ],
-    "extends": "stylelint-config-standard",
+    "extends": ["stylelint-config-standard-scss"],
     "rules": {
-        "indentation": 4,
-        "max-empty-lines": 2,
-        "comment-empty-line-before": null,
+        "alpha-value-notation": "number",
+        "at-rule-empty-line-before": null,
+        "at-rule-no-unknown": null,
+        "block-closing-brace-newline-after": ["always", { "ignoreAtRules": ["if", "else"]}],
+        "block-no-empty": null,
+        "block-opening-brace-space-before": "always",
+        "color-hex-case": "upper",
+        "color-hex-length": "long",
         "color-named": "never",
-        "number-leading-zero": "never",
-        "length-zero-no-unit": true,
+        "comment-empty-line-before": null,
         "declaration-bang-space-after": "never",
         "declaration-bang-space-before": "always",
         "declaration-block-no-duplicate-properties": true,
         "declaration-empty-line-before": null,
-        "selector-list-comma-newline-after": "always",
-        "block-opening-brace-space-before": "always",
-        "block-closing-brace-newline-after": [
-            "always", {
-                "ignoreAtRules": ["if", "else"]
-            }
-        ],
-        "at-rule-empty-line-before": null,
-        "selector-pseudo-element-colon-notation": "single",
-        "selector-pseudo-class-no-unknown": [true, {
-            "ignorePseudoClasses": ["global"]
-        }],
-        "color-hex-case": "upper",
-        "color-hex-length": "long",
-        "block-no-empty": null,
-        "rule-empty-line-before": [
-            "always-multi-line", {
-                "except": ["first-nested"],
-                "ignore": ["after-comment"]
-            }
-        ],
-        "at-rule-no-unknown": null,
+        "indentation": 4,
+        "length-zero-no-unit": true,
+        "max-empty-lines": 2,
         "max-nesting-depth": 7,
         "no-descending-specificity": null,
+        "number-leading-zero": "never",
+        "rule-empty-line-before": ["always-multi-line", {"except": ["first-nested"], "ignore": ["after-comment"]}],
+        "selector-class-pattern": null,
+        "selector-list-comma-newline-after": "always",
+        "selector-pseudo-class-no-unknown": [true, {"ignorePseudoClasses": ["global"]}],
+        "selector-pseudo-element-colon-notation": "single",
+        "value-keyword-case": ["lower", { "camelCaseSvgKeywords": true }],
         "order/order": [
             {
                 "type": "at-rule",
@@ -54,7 +46,7 @@ module.exports = {
             "declarations",
             {
                 "type": "rule",
-                "selector": /^&:[\w-]+$/,
+                "selector": "/^&:[\\w-]+$/"
             },
             "rules",
             {
@@ -245,26 +237,26 @@ module.exports = {
         "scss/at-else-empty-line-before": "never",
         "scss/at-else-if-parentheses-space-before": "always",
         "scss/at-extend-no-missing-placeholder": true,
+        "scss/at-function-parentheses-space-before": "never",
         "scss/at-if-closing-brace-newline-after": "always-last-in-chain",
         "scss/at-if-closing-brace-space-after": "always-intermediate",
-        "scss/at-function-parentheses-space-before": "never",
         "scss/at-import-no-partial-leading-underscore": true,
         "scss/at-mixin-argumentless-call-parentheses": "always",
         "scss/at-mixin-named-arguments": "always",
         "scss/at-mixin-parentheses-space-before": "never",
         "scss/at-rule-no-unknown": true,
+        "scss/declaration-nested-properties": "never",
         "scss/dollar-variable-colon-newline-after": "always-multi-line",
         "scss/dollar-variable-colon-space-after": "at-least-one-space",
         "scss/dollar-variable-colon-space-before": "never",
+        "scss/dollar-variable-empty-line-before": null,
         "scss/dollar-variable-no-missing-interpolation": true,
+        "scss/dollar-variable-pattern": null,
         "scss/double-slash-comment-whitespace-inside": "always",
-        "scss/declaration-nested-properties": "never",
         "scss/operator-no-newline-after": true,
         "scss/operator-no-newline-before": true,
         "scss/operator-no-unspaced": true,
+        "scss/percent-placeholder-pattern": null,
         "scss/selector-no-redundant-nesting-selector": true,
-        "scss/no-duplicate-dollar-variables": [,
-            { "ignoreInsideAtRules": ["if", "mixin"] }
-        ]
     }
 }
